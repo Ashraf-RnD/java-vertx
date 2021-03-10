@@ -33,6 +33,9 @@ dependencies {
   implementation("io.vertx:vertx-web")
   implementation("io.vertx:vertx-maven-service-factory")
   implementation("io.vertx:vertx-json-schema")
+  implementation ("com.fasterxml.jackson.core:jackson-core:2.12.2")
+  implementation ("com.google.code.gson:gson:2.8.5")
+  implementation("org.projectlombok:lombok:1.18.16")
   testImplementation("io.vertx:vertx-junit5")
   testImplementation("org.junit.jupiter:junit-jupiter:$junitJupiterVersion")
 }
