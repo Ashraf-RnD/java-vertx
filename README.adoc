@@ -20,6 +20,10 @@ To run your application:
 ```
 ./gradlew clean run
 ```
+To run your application without test:
+```
+gradle clean build run -x test
+```
 
 == Help
 
