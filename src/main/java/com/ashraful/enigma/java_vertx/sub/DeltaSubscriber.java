@@ -9,13 +9,15 @@ import io.vertx.core.Promise;
 import io.vertx.core.impl.logging.Logger;
 import io.vertx.core.impl.logging.LoggerFactory;
 
+import static com.ashraful.enigma.java_vertx.commons.Constants.ADDRESS_P2P_SENDER;
+
 public class DeltaSubscriber extends AbstractSubscriber {
   Logger log = LoggerFactory.getLogger(this.getClass());
 
   @Override
   public void start(Promise<Void> startPromise) throws Exception {
 
-    eventConsumer(log);
+    eventConsumer(log,ADDRESS_P2P_SENDER);
 
   }
 }

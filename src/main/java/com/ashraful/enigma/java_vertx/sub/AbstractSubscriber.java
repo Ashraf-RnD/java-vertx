@@ -9,13 +9,11 @@ import io.vertx.core.AbstractVerticle;
 import io.vertx.core.impl.logging.Logger;
 import io.vertx.core.json.JsonObject;
 
-import static com.ashraful.enigma.java_vertx.commons.Constants.ADDRESS_EVENT_PUBLISHER;
-
 public abstract class AbstractSubscriber extends AbstractVerticle {
 
-  protected void eventConsumer(Logger log){
+  protected void eventConsumer(Logger log,String consumerAddress){
     vertx.eventBus()
-      .consumer(ADDRESS_EVENT_PUBLISHER, msg -> {
+      .consumer(consumerAddress, msg -> {
 
         var msgBody = msg.body();
         log.info("msgBody = " + this.getClass().getName() + " :: " + msgBody);

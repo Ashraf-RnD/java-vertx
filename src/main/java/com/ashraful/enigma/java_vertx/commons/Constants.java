@@ -10,6 +10,7 @@ public class Constants {
   }
 
   public static final String ADDRESS_EVENT_PUBLISHER = "EventPublisher";
+  public static final String ADDRESS_P2P_SENDER = "P2PSender";
 
 
   public static final String CONTENT_TYPE = "content-type";
