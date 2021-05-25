@@ -33,4 +33,9 @@ public class AbstractPublisher extends AbstractVerticle {
     response.putHeader(CONTENT_TYPE, TEXT_PLAIN);
     response.end("Response event from "+this.getClass().getName());
   }
+  protected void prepareResponse(RoutingContext routingContext,String responseString) {
+    var response = routingContext.response();
+    response.putHeader(CONTENT_TYPE, TEXT_PLAIN);
+    response.end("Response event from "+responseString);
+  }
 }
