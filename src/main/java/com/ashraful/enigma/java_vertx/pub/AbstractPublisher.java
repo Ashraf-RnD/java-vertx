@@ -10,8 +10,7 @@ import io.vertx.core.json.JsonObject;
 import io.vertx.ext.web.Router;
 import io.vertx.ext.web.RoutingContext;
 
-import static com.ashraful.enigma.java_vertx.commons.Constants.CONTENT_TYPE;
-import static com.ashraful.enigma.java_vertx.commons.Constants.TEXT_PLAIN;
+import static com.ashraful.enigma.java_vertx.commons.Constants.*;
 
 public class AbstractPublisher extends AbstractVerticle {
 
@@ -35,7 +34,7 @@ public class AbstractPublisher extends AbstractVerticle {
   }
   protected void prepareResponse(RoutingContext routingContext,String responseString) {
     var response = routingContext.response();
-    response.putHeader(CONTENT_TYPE, TEXT_PLAIN);
-    response.end("Response event from "+responseString);
+    response.putHeader(CONTENT_TYPE, APPLICATION_JSON);
+    response.end(responseString);
   }
 }

@@ -15,4 +15,5 @@ public class Constants {
 
   public static final String CONTENT_TYPE = "content-type";
   public static final String TEXT_PLAIN = "text/plain";
+  public static final String APPLICATION_JSON = "application/json";
 }

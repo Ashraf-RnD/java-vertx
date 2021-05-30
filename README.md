@@ -25,6 +25,17 @@ To run your application without test:
 gradle clean build run -x test
 ```
 
+To see sns information in aws cli :
+
+Topic List
+```
+aws sns --endpoint http://localhost:4575 --region ap-southeast-1 list-topics
+```
+Subscription List
+```
+aws sns --endpoint http://localhost:4575 --region ap-southeast-1 list-subscriptions
+```
+
 == Help
 
 * https://vertx.io/docs/[Vert.x Documentation]
